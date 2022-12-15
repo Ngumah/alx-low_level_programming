@@ -2,24 +2,24 @@
 /**
  * _isupper - check upper cases
  *  @c: value to check
- * Return: 1 if successful else 0 
+ * Return: 1 if successful else 0
  */
 int _isupper(int c)
 {
 	char k;
+	int re;
 
 	for (k = 'A'; k <= 'Z'; k++)
 	{
 		if (c != k)
 		{
-			Return (0);
-			
+			re = 0;
 		}
 		else
 		{
-			Return (1);
+			re = 1;
 			break;
 		}
-
 	}
+	return (re);
 }
