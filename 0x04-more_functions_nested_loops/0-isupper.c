@@ -7,16 +7,19 @@
 int _isupper(int c)
 {
 	char k;
-	for (k = 'A'; k <= 'Z' k++)
+
+	for (k = 'A'; k <= 'Z'; k++)
 	{
 		if (c != k)
 		{
-			return(0);
+			Return (0);
+			
 		}
 		else
 		{
-			return(1);
-			break:
+			Return (1);
+			break;
 		}
+
 	}
-}	
+}
