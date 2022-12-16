@@ -1,6 +1,6 @@
-#ifndef HOLBERTON_H_INCLUDED
-#define HOLBERTON_H_INCLUDED
+#ifndef MAIN_H
+#define MAIN_H
 
-nt _isupper(int c);
+int _isupper(int c);
 
 #endif
