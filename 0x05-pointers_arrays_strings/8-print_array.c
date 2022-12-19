@@ -9,8 +9,9 @@
 void print_array(int *a, int n)
 {
 	int i = 0;
-	
-	if (n <= 0 || a == NULL){
+
+	if (n <= 0 || a == NULL)
+	{
 		printf("\n");
 		return;
 	}
