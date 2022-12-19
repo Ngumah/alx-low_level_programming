@@ -12,7 +12,7 @@ void rev_string(char *s)
 	len = j;
 	j--;
 
-	for (; i <= len / 2; i++)
+	for (; i < len / 2; i++)
 	{
 		if (i != j)
 		{
