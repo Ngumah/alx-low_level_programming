@@ -1,34 +1,27 @@
 #include "main.h"
 
 /**
- * rot13 - encode the string using rot13
- * @str: string
+ * rot13 - encodes a string into rot13
+ * @s: string to encode
  *
- * Return: leet string
+ * Return: address of s
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-	int i;
-	int c = 0;
-	char lower[52] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
-		'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
-		'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
-		'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
-		'y', 'z'};
-	char rot_arr[52] = { 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
-		'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
-		'J', 'K', 'L', 'M', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-		'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g',
-		'h', 'i', 'j', 'k', 'l', 'm'};
+	int i, j;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (str[c])
+	for (i = 0; *(s + i); i++)
 	{
-		for (i = 0; i < 52; i++)
+		for (j = 0; j < 52; j++)
 		{
-			if (str[c] == lower[i])
-				str[c] = rot_arr[i];
+			if (a[j] == *(s + i))
+			{
+				*(s + i) = b[j];
+				break;
+			}
 		}
-		c++;
 	}
-	return (str);
+	return (s);
 }
